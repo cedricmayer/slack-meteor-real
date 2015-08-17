@@ -1,0 +1,23 @@
+<template name = "posts">
+	<div>
+		<ul class="search_post clear">
+			<li class="box">
+				<form action="">
+					<span class="icon"><i class="fa fa-search"></i></span>
+					<input type="search" id="search" placeholder="Search..." />
+				</form>
+			</li>
+			<li class="post_button_pad">
+				<a href="#" class="post_button">Post Job</a>
+			</li>
+		</ul>
+
+		<section class="posts_section clear Container" id = "Container">
+
+		{{#each posts}}             
+        	{{>post job_title=job_title company_name=company_name location=location post_date=post_date}}
+        {{/each}}
+
+		</section>
+	</div>
+</template>

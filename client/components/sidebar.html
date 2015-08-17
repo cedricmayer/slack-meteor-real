@@ -1,0 +1,72 @@
+<template name = "sidebar">
+	<div class="side_width">
+		<section class="filters">
+			<form class="controls" id="Filters">
+		  <!-- We can add an unlimited number of "filter groups" using the following format: -->
+		  
+		  <fieldset>
+		    <h4>Job Categories</h4>
+		      <div class="checkbox">
+		      <input type="checkbox" value=".fed"/>
+		      <label>Front End</label>
+		    </div>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".ux"/>
+		      <label>User Experience</label>
+		    </div>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".ui"/>
+		      <label>User Interface</label>
+		    </div>
+		      <div class="checkbox">
+		      <input type="checkbox" value=".visual"/>
+		      <label>Visual</label>
+		    </div>
+		        <div class="checkbox">
+		      <input type="checkbox" value=".othercat"/>
+		      <label>Other</label>
+		    </div>
+		  </fieldset><br>
+		  
+		  <fieldset>
+		    <h4>Duration</h4>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".full"/>
+		      <label>Full-Time</label>
+		    </div>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".part"/>
+		      <label>Part-Time</label>
+		    </div>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".free"/>
+		      <label>Freelance/Contract</label>
+		    </div>
+		  </fieldset><br>
+		  
+		  <fieldset>
+		    <h4>Location</h4>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".chi"/>
+		      <label>Chicago, IL</label>
+		    </div>
+		    <div class="checkbox">
+		      <input type="checkbox" value=".ny"/>
+		      <label>New York, NY</label>
+		    </div>
+		        <div class="checkbox">
+		      <input type="checkbox" value=".sf"/>
+		      <label>San Francisco, CA</label>
+		    </div>
+		      <div class="checkbox">
+		      <input type="checkbox" value=".otherloc"/>
+		      <label>Other</label>
+		    </div>
+		  </fieldset><br>
+		  
+		  <button id="Reset">Clear</button>
+		</form>
+
+		</section>
+	</div>
+</template>
