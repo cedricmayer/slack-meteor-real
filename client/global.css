@@ -5,6 +5,11 @@
 	font-family: 'futura', sans-serif;
 	list-style: none;
 }
+
+html {
+  overflow-y:scroll; 
+}
+
 body {
  background-color: #fefbfc;
 }
@@ -19,7 +24,7 @@ body a:hover {
 }
 
 .input-box {
-/*  display: none;*/
+  display: none;
 }
 
 .header {
@@ -56,10 +61,21 @@ body a:hover {
 	height: 100%;
 	border-right: 1px solid #e7e2e3;
 	margin: 50px 0 0 5.5em;
+  z-index: 100000;
 }
 
 .side_width {
 	width: 245px;
+}
+
+.hamburger.fa {
+  display: none; 
+  font-size: 1.5em;
+}
+
+.box {
+  float: left;
+  margin-top: .3em;
 }
 
 /*FILTERS SECTION END*/
@@ -67,24 +83,32 @@ body a:hover {
 .search_post {
 	position: relative; 
 	float: right;
-	display: inline-block;
-	width: 84.5%;
-	text-align: center;
-	padding: 25px 0 13px 6em;
-	margin-top: 50px;
-
+	width: 57%;
+	margin-top: 4em; 
+  margin-right: 9em;
 }
 
 .search_post li {
-	display: inline-block;
+	position: relative;
+  vertical-align: middle;
 }
 
 .icon {
 	color: #AfA0A1;
+  font-size: 20px;
 }
-.search_form input {
+
+
+input#search {
 	font-family: "Futura", sans-serif;
 	font-size: 20px;
+    border: none;
+    background-color: #fefbfc;
+    font-size: 16px;
+    outline: none;
+    color: #AfA0A1;
+
+
 }
 
 .post_button {
@@ -94,7 +118,7 @@ body a:hover {
 	text-decoration: none;
 	color: white;
 	font-size: 20px;
-	margin-left: 40vw;
+  float: right;
 }
 
 .post_button:hover {
@@ -149,7 +173,7 @@ body a:hover {
 	padding: 5px 0 0 10px;
 }
 
-.like:hover {
+.like:hover,.job_title:hover {
 	color: #fb253d;
 
 }
@@ -330,7 +354,7 @@ fieldset{
 }
 
 .checkbox input:focus ~ label:before{
-  background: #f9f9f9;
+  background: #e7e2e3;
 }
 
 /**
@@ -399,26 +423,17 @@ fieldset{
 }
 
 @media only screen and (max-width: 1300px)  {
-  .post_button{
-  margin-left:  26vw;
-}
-
-.search_post { 
-  margin-right:2em;
-  }
-
   .filters {
     margin-left: 0em;
   }
 
+  .search_post {
+  margin-right: 7em;
+}
+
 }
 
 @media only screen and (max-width: 1180px)  {
-
-.post_button {
-  float:none;
-  margin-left: 23vw;
-}
 
 .job_post {
   width: 60%;
@@ -428,51 +443,101 @@ fieldset{
   margin-right: 10px;
   }
 
-
-.search_post {
-  width: 98%;
-
-}
-
 .media_resize {
   margin:0 auto;
   float: none;
 }
 
 .posts_section {
-  width: 90%;
-  margin-right: -4em;
+  width: 100%;
+  margin-right: -20em;
+}
+
+.search_post {
+  margin-right: 7em;
 }
 }
+
+@media only screen and (max-width: 1100px)  {
+.search_post {
+  margin-right: 5.5em;
+}
+}
+
+@media only screen and (max-width: 1000px)  {
+.search_post {
+  margin-right: 3em;
+}
+}
+
 
 @media only screen and (max-width: 900px)  {
 
   .filters {
-  display: none;
+  position: absolute;
+  left: -400px;
+}
+
+.hamburger.fa {
+    position: absolute;
+    display: inline-block;
+    left: 1em;
+    top: 3.1em;
 }
 
 .posts_section {
-   margin-right: 0em;
-}
-
-.search_post {
-  width: 100%;
-
+   margin-right: -20em;
+   width: 130%;
 }
 
 .like i {
   padding: 5px 0 0 0px;
 }
 
+.search_post {
+  width: 75%;
+  margin-right: 5.5em;
+}
+
+}
+
+@media only screen and (max-width: 800px)  {
+.posts_section {
+  width: 140%;
+  margin-right:-20em; 
+}
+
+.search_post {
+  width: 75%;
+  margin-right: 5.5em;
+}
+
+}
+
+@media only screen and (max-width: 700px)  {
+
+.posts_section {
+  width: 140%;
+  margin-right:-18em; 
+}
+
+.search_post {
+  width: 75%;
+  margin-right: 2.5em;
+}
+
 }
 
 @media only screen and (max-width: 600px)  {
-.post_button { 
-  margin-left:6vw;
+
+.posts_section {
+  width: 145%;
+  margin-right:-15em; 
 }
+
 .search_post {
-  float: right;
-  padding-left: 5em;
+  width: 75%;
+  margin-right: 2.5em;
 }
 
 }
@@ -493,10 +558,6 @@ fieldset{
   float: initial;
   text-align: left;
 }
-.post_button {
-  margin-left: 6vw;
-  text-align: right;
-}
 
 .job_post {
   width: 100%;
@@ -505,7 +566,7 @@ fieldset{
 }
 
 .posts_section {
-  width: 100%;
+  width: 152%;
 }
 
 .like i {
@@ -513,10 +574,29 @@ fieldset{
 }
 
 .search_post {
-  width: 75%;
-  padding-left: 0em;
+  width: 73%;
+  margin-right: 2.5em;
+}
+
+input#search {
+  width: 110px;
+}
+
 
 }
+
+@media only screen and (max-width: 400px)  {
+
+.posts_section {
+  width: 162%;
+  margin-right:-15em; 
+}
+
+.search_post {
+  margin-right: 1.4em;
+}
+
+
 }
 
 
