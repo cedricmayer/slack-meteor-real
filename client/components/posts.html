@@ -1,6 +1,14 @@
 <template name = "posts">
+
+	<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
+
+
 	<div class="media_resize">
-		<i class="fa fa-bars hamburger" id="hamburger"></i>
+		<div class = "hamburger_wrapper">
+			<i class="fa fa-bars hamburger" id="hamburger"></i>
+		</div>
+		
 		<ul class="search_post clear">
 			<li class="box">
 				<form action="">
@@ -10,6 +18,9 @@
 			</li>
 			<li class="post_button_pad">
 				<a href="/form" class="post_button">Post Job</a>
+			</li>
+			<li class="post_button_pad">
+				<a href="/view_post" class="view_post_button">View Post</a>
 			</li>
 		</ul>
 
