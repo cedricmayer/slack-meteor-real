@@ -7,3 +7,5 @@
 meteor-platform
 autopublish
 insecure
+iron:router@1.0.0-pre4
+manuelschoebel:wait-on-lib
